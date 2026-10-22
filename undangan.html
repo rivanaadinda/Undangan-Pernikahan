@@ -10,118 +10,111 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    :root {
-      --bg-light: #f7f6f2;
-      --bg-dark: #0d0d0d;
-      --text-dark: #1a1a1a;
-      --text-muted: #666666;
-      --font-serif: 'Cormorant Garamond', serif;
-      --font-sans: 'Montserrat', sans-serif;
-    }
+body {
+  background-color: #f7f6f2;
+  color: #1a1a1a;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
 
-    body {
-      background-color: var(--bg-light);
-      color: var(--text-dark);
-      font-family: var(--font-sans);
-      overflow-x: hidden;
-    }
+h1, h2, h3, .font-serif {
+  font-family: 'Cormorant Garamond', serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
-    h1, h2, h3, .font-serif {
-      font-family: var(--font-serif);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), 
+              url('fotbar.jpg') center/cover no-repeat;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem 1.5rem;
+  filter: grayscale(100%);
+}
 
-    .hero-section {
-      height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), 
-                  url('fotbar.jpg') center/cover no-repeat;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 3rem 1.5rem;
-      filter: grayscale(100%);
-    }
+.sec-padding {
+  padding: 5rem 0;
+}
 
-    .sec-padding {
-      padding: 5rem 0;
-    }
+.bg-dark-section {
+  background-color: #0d0d0d;
+  color: #ffffff;
+}
 
-    .bg-dark-section {
-      background-color: var(--bg-dark);
-      color: #ffffff;
-    }
+.border-custom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
 
-    .border-custom {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    }
+.border-custom-light {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
 
-    .border-custom-light {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
+.grayscale-img {
+  filter: grayscale(100%);
+  transition: transform 0.5s ease;
+  object-fit: cover;
+  width: 100%;
+}
 
-    .grayscale-img {
-      filter: grayscale(100%);
-      transition: transform 0.5s ease;
-      object-fit: cover;
-      width: 100%;
-    }
+.grayscale-img:hover {
+  transform: scale(1.02);
+}
 
-    .grayscale-img:hover {
-      transform: scale(1.02);
-    }
+.countdown-item {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+}
 
-    .countdown-item {
-      font-family: var(--font-serif);
-      font-size: 1.8rem;
-    }
+.countdown-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
-    .countdown-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+.audio-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0d0d0d;
+  color: #fff;
+  border: 1px solid #ffffff44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
 
-    .audio-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: var(--bg-dark);
-      color: #fff;
-      border: 1px solid #ffffff44;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: #1a1a1a;
+  box-shadow: none;
+}
 
-    .accordion-button:not(.collapsed) {
-      background-color: transparent;
-      color: var(--text-dark);
-      box-shadow: none;
-    }
-    .accordion-button:focus {
-      box-shadow: none;
-    }
-    .accordion-item {
-      border: none;
-      border-bottom: 1px solid #ccc;
-      background: transparent;
-    }
+.accordion-button:focus {
+  box-shadow: none;
+}
 
-    .btn-outline-dark, .btn-light {
-      border-radius: 0;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      font-size: 0.85rem;
-      padding: 10px 24px;
-    }
+.accordion-item {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+}
+
+.btn-outline-dark, .btn-light {
+  border-radius: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  padding: 10px 24px;
+}
   </style>
 </head>
 <body>
